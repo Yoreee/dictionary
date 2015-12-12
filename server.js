@@ -11,7 +11,7 @@ request({
     qs: {from: 'blog example', time: +new Date()}, //Query string data
     method: 'GET', //Specify the method
     headers: { //We can define headers too
-        'X-Mashape-Key': 'uxtlI0eyGLmsh2EDGWuYiRSaBHwQp19aJnCjsnpLkbTx0SdeWu'
+        'X-Mashape-Key': ''
     }
 }, function(error, response, body){
     if(error) {
