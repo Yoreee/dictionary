@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var request = require('request')
+var dotenv = require('dotenv').load()
 
 app.listen(3000, function(req, res) {
 	console.log('listening')
@@ -11,7 +12,7 @@ request({
     qs: {from: 'blog example', time: +new Date()}, //Query string data
     method: 'GET', //Specify the method
     headers: { //We can define headers too
-        'X-Mashape-Key': ''
+        'X-Mashape-Key': process.env.mashape_key
     }
 }, function(error, response, body){
     if(error) {
