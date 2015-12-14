@@ -4,10 +4,11 @@ var request = require('request');
 var dotenv = require('dotenv').load();
 var jade = require('jade');
 var bodyParser = require('body-parser');
-var methodOverride = require('method-override')
+var methodOverride = require('method-override');
+var mongo = require('mongodb');
 
 var app = express();
-var routes = require('./routes/index')
+var routes = require('./routes')
 
 
 app.set('views', path.join(__dirname, 'public/views'));
