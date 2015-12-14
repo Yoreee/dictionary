@@ -1,4 +1,10 @@
 extends layout
 
 block content
-	h1 hi
+	h1 the colorful dictionary
+	
+
+	h4 Look up a word
+	form#lookupForm(method="POST" action="/lookup")
+		input#wordInput(type="text" name="word" )
+		input#submit(type="submit")
