@@ -1,12 +1,11 @@
 extends layout
 
 block content
-	h1 the colorful dictionary
-	
-
+	h1 the dictionary
 	h4 Look up a word
-	form#lookupForm(method="POST" action="/lookup")
-		input#wordInput(type="text" name="word" )
-		input#submit(type="submit")
-
+	input(ng-model="query")
+	button(ng-click="search()")
 	div#container
+		p {{1 + 2}}
+
+		p {{word}}

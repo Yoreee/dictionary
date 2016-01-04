@@ -6,8 +6,10 @@ router.get('/', function(req, res, next) {
 	res.render('index');
 })
 
+
 router.post('/lookup', function(req, res, next) {
     console.log(req.body)
+    var data;
     request({
         url: 'https://montanaflynn-dictionary.p.mashape.com/define?word=' + req.body.word, //URL to hit
         qs: {from: 'blog example', time: +new Date()}, //Query string data
@@ -19,10 +21,12 @@ router.post('/lookup', function(req, res, next) {
         if(error) {
             console.log(error);
         } else {
+            data = body;
             console.log(response.statusCode, body);
+            res.json(data)
         }
     });
 })
 
-
+//Export the router
 module.exports = router;

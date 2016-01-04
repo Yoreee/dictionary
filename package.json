@@ -15,6 +15,7 @@
     "jade": "^1.11.0",
     "method-override": "^2.3.5",
     "mongodb": "^2.1.1",
+    "mongoose": "^4.3.1",
     "path": "^0.12.7",
     "request": "^2.67.0"
   }
