@@ -6,12 +6,13 @@ html(ng-app="wordsApp", lang="en")
 		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
 		link(rel="stylesheet", href="/styles/style.css")
 		script(type='text/javascript', src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js")
-		script(type='text/javascript', src="/js/scripts.js")
-		script(type="text/javascript").
+		script(type='text/javascript', src="/app/scripts.js")
+		script(type='text/javascript', src="/app/app.js")
+		script(type='text/javascript', src="/app/controllers/MainController.js")
+		script(type='text/javascript', src="/app/services/definition1.js")
+		
 			
-	body(ng-controller="WordCtrl", class="text-center")
+	body(ng-controller="WordController as word", class="text-center")
 		block content
 
 			
-		script(type='text/javascript', src="/js/app.js")
-		script(type='text/javascript', src="/js/controllers/MainController.js")
