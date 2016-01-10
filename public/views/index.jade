@@ -3,8 +3,9 @@ extends layout
 block content
 	h1 the dictionary
 	h4 Look up a word
-	input.word-input(ng-model="word.query" placeholder="look up a word...")
-	button(ng-click="word.lookup()" class="btn-danger btn-lg") search
+	div.lookup-container()
+		input.word-input(ng-model="word.query" placeholder="look up a word...")
+		button.word-submit(ng-click="word.lookup()" class="btn btn-danger-outline btn-lg") search
 	div#container
-		p {{1 + 2}}
+		
 

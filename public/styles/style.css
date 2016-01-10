@@ -1,3 +1,29 @@
 body {
-	background-color: lemonChiffon;
+
+}
+
+.word-input {
+	margin-right: 10px;
+	height: 48px;
+	padding-left: 10px;
+	font-size: 20px;
+	border-radius: 5px;
+	outline: none;
+
+
+}
+
+.lookup-container {
+	margin-top: 20px;
+	display: inline-block;
+
+}
+
+.word-input {
+	display: inline-block;
+}
+
+.word-submit {
+	display: inline-block;
+	position: absolute;
 }

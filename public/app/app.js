@@ -1,4 +1,4 @@
-// (function(){
+(function(){
 	
 	var app = angular.module("wordsApp", []);
 
@@ -17,7 +17,6 @@
 		    .then(function success(res) {
 		        console.log(res.data)
 		        console.log('success')
-		        console.log(this.query)
 		    }, function error(res) {
 		        console.log(res.status)
 		    	});
@@ -26,4 +25,4 @@
 
 
 
-// })();
+})();
