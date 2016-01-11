@@ -1,5 +1,11 @@
 body {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 auto;
+}
 
+.outer {
+	text-align: center;
 }
 
 .word-input {
@@ -9,21 +15,44 @@ body {
 	font-size: 20px;
 	border-radius: 5px;
 	outline: none;
-
-
 }
 
 .lookup-container {
 	margin-top: 20px;
-	display: inline-block;
-
-}
-
-.word-input {
 	display: inline-block;
 }
 
 .word-submit {
 	display: inline-block;
 	position: absolute;
+	border-radius: 5px;
+	height: 52px;
 }
+
+.git {
+	position: absolute;
+	clear: both;
+	margin-left: auto;
+	right: 10px;
+}
+
+.github {
+	background: url("../assets/github-logo.png");
+	position: relative;
+	width: 36px;
+	background-repeat: no-repeat;
+	height: 36px;
+	float: right;
+}
+
+#container {
+	position: relative;
+	margin-top: 50px;
+	clear: both;
+}
+
+#definition {
+	position: relative;
+}
+
+

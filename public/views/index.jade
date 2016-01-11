@@ -1,11 +1,17 @@
 extends layout
 
 block content
-	h1 the dictionary
-	h4 Look up a word
-	div.lookup-container()
-		input.word-input(ng-model="word.query" placeholder="look up a word...")
-		button.word-submit(ng-click="word.lookup()" class="btn btn-danger-outline btn-lg") search
-	div#container
-		
+	div.outer
+		div.git
+			a.github(href="www.github.com/yoreee")
+		h1 my cool words
+		h4 Look up a word
+
+		div.lookup-container()
+			input.word-input(ng-model="word.query" placeholder="look up a word...")
+			button.word-submit(ng-click="word.lookup()") search
+		div#container
+			h4 {{word.query}}
+			div#definition(ng-repeat="w in word.repeatData")
+				p {{w.value + "."}} {{w.data.text}}
 

@@ -1,10 +1,10 @@
 doctype html
 html(ng-app="wordsApp", lang="en")
 	head
+		meta(name="viewport", content="width=device-width, initial-scale=1")
 		title= title
-		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
-		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
 		link(rel="stylesheet", href="/styles/style.css")
+		link(rel="stylesheet", href="/styles/dictionary-small.css")
 		script(type='text/javascript', src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js")
 		script(type='text/javascript', src="/app/scripts.js")
 		script(type='text/javascript', src="/app/app.js")
@@ -12,7 +12,5 @@ html(ng-app="wordsApp", lang="en")
 		script(type='text/javascript', src="/app/services/definition1.js")
 		
 			
-	body(ng-controller="WordController as word", class="text-center")
+	body(ng-controller="WordController as word")
 		block content
-
-			
