@@ -3,15 +3,15 @@ extends layout
 block content
 	div.outer
 		div.git
-			a.github(href="www.github.com/yoreee")
-		h1 my cool words
+			a.github(href="https://github.com/Yoreee/dictionary")
+		h1 awesome words
 		h4 Look up a word
 
 		div.lookup-container()
 			input.word-input(ng-model="word.query" placeholder="look up a word...")
 			button.word-submit(ng-click="word.lookup()") search
 		div#container
-			h4 {{word.query}}
+			h3 {{word.data}}
 			div#definition(ng-repeat="w in word.repeatData")
 				p {{w.value + "."}} {{w.data.text}}
 

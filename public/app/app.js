@@ -19,13 +19,13 @@
 		    .then(function success(res) {
 		        console.log(res.data)
 		        console.log('success')
-		        that.data = res.data.definitions
 		        that.repeatData = res.data.definitions.map(function(value, index) {
 		        	return {
 		        		data: value,
 		        		value: index +1
 		        	}
 		        })
+		        that.data = that.query
 		        console.log(that.repeatData);
 		        document.getElementsByClassName('word-input')[0].value = "";
 		    }, function error(res) {

@@ -46,13 +46,19 @@ body {
 }
 
 #container {
-	position: relative;
-	margin-top: 50px;
-	clear: both;
+	width: 60%;
+	max-width: 300px;
+	margin: 50px auto 0 auto;
+	text-align: center;
+}
+
+#container > h4 {
+	/*position: relative;*/
+	text-align: left;
 }
 
 #definition {
-	position: relative;
+	/*position: relative;*/
 }
 
 
