@@ -14,10 +14,10 @@ var routes = require('./routes')
 var api = require('./routes/api.js')
 
 
-app.set('views', path.join(__dirname, 'public/views'));
+app.set('views', path.join(__dirname, 'client/views'));
 // app.set('styles', path.join(__dirname, 'public/styles'))
 app.set('view engine', 'jade');
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client')));
 app.use(methodOverride('_method'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -49,5 +49,6 @@ mongoose.connection.once('open', function() {
 		console.log('listening');
 	});
 });
+
 
 module.exports = app;

@@ -8,10 +8,10 @@ block content
 		h4 Look up a word
 
 		div.lookup-container()
-			input.word-input(ng-model="word.query" placeholder="look up a word...")
+			input.word-input(ng-model="word.query" placeholder="type a word...")
 			button.word-submit(ng-click="word.lookup()") search
 		div#container
-			h3 {{word.data}}
+			h3 {{word.term}}
 			div#definition(ng-repeat="w in word.repeatData")
 				p {{w.value + "."}} {{w.data.text}}
-
+			button.save(ng-click="word.save()") save

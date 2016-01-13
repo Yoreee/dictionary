@@ -27,7 +27,7 @@ router.post('/words', function(req, res, next) {
 		if (err) {
 			return next(err)
 		} else {
-			res.json(post);
+			res.json(word);
 		};
 	})
 });
