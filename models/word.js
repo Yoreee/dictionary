@@ -6,4 +6,5 @@ var WordSchema = new mongoose.Schema({
 	definition: Array
 })
 
+
 module.exports = mongoose.model('Word', WordSchema);

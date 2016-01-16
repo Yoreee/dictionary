@@ -1,4 +1,45 @@
 body {
+	font-family: 'Indie Flower', cursive;
+	letter-spacing: .2em;
+	text-align: center;
+}
+
+#container {
+	width: 60%;
+	max-width: 300px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.git {
+	position: absolute;
+	clear: both;
+	margin-left: auto;
+	right: 10px;
+}
+
+.github {
+	background: url("../assets/github-logo.png");
+	position: relative;
+	width: 36px;
+	background-repeat: no-repeat;
+	height: 36px;
+	float: right;
+}
+
+.index > span {
+	display: inline-block;
+}
+
+.index > p {
+	display: inline-block;
+}
+
+.delete{
+	color: red;
+	margin-left: 10px;
+}
+/*body {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 auto;
@@ -29,21 +70,7 @@ body {
 	height: 52px;
 }
 
-.git {
-	position: absolute;
-	clear: both;
-	margin-left: auto;
-	right: 10px;
-}
 
-.github {
-	background: url("../assets/github-logo.png");
-	position: relative;
-	width: 36px;
-	background-repeat: no-repeat;
-	height: 36px;
-	float: right;
-}
 
 #container {
 	width: 60%;
@@ -53,12 +80,12 @@ body {
 }
 
 #container > div {
-	/*position: relative;*/
+	position: relative;
 	text-align: left;
 }
 
 #definition {
-	/*position: relative;*/
+	position: relative;
 }
 
-
+*/

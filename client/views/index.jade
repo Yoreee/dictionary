@@ -4,14 +4,26 @@ block content
 	div.outer
 		div.git
 			a.github(href="https://github.com/Yoreee/dictionary")
-		h1 awesome words
-		h4 Look up a word
-
-		div.lookup-container()
-			input.word-input(ng-model="word.query" placeholder="type a word...")
-			button.word-submit(ng-click="word.lookup()") search
-		div#container
-			h3 {{word.term}}
-			div#definition(ng-repeat="w in word.repeatData")
-				p {{w.value + "."}} {{w.data.text}}
-			button.save(ng-click="word.save()") save
+		h1 word up!
+		
+		div.nav()
+			button.saved-words(ng-click="word.showIndex(); word.index();") saved words
+			button.lookup-words(ng-click="word.showLookup()") look up words
+		div.content()
+			div.lookup-container(ng-show="word.navState == 2")
+				h4 Look up a word
+				input.word-input(ng-model="word.query" placeholder="type a word...")
+				button.word-submit(ng-click="word.lookup()") search
+				div#container()
+					h3 {{word.term}}
+					div#definition(ng-repeat="w in word.repeatData")
+						p {{w.value + "."}} {{w.data.text}}
+					div.btn(ng-show="word.term")
+						button.save(ng-click="word.new()") save
+			div.index-container(ng-show="word.navState == 1")
+				h3 Saved words
+				div.index(ng-repeat="item in word.indexDisplay")
+					span.word(ng-click="word.showWord(); word.show(item._id)") {{item.word}}
+					span.delete(ng-click="word.remove(item._id); word.index()") X
+			div.show-container(ng-show="word.navState == 3;")
+				h3 Word

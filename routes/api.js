@@ -13,7 +13,7 @@ router.get('/words', function(req, res, next) {
 });
 
 router.get('/words/:id', function(req, res, next) {
-	Words.findById(function(err, word) {
+	Words.findById(req.params.id, function(err, word) {
 		if (err) {
 			return next(err)
 		} else {
@@ -48,6 +48,7 @@ router.delete('/words/:id', function(req, res, next) {
 			return next(err);
 		} else {
 			res.json(word)
+			console.log('trying to delete')
 		}
 	})
 });

@@ -9,6 +9,22 @@
 		this.term;
 		this.defArray;
 		this.repeatData;
+		this.navState;
+		this.indexDisplay;
+		this.showCurrent = {};
+
+		this.showIndex = function() {
+			that.navState = 1;
+		};
+
+		this.showLookup = function() {
+			that.navState = 2;
+		};
+
+		this.showWord = function() {
+			that.navState = 3;
+		};
+
 		this.lookup = function() {
 	        $http({
 		        url: 'https://montanaflynn-dictionary.p.mashape.com/define?word=' + this.query, //URL to hit
@@ -20,7 +36,6 @@
 		    })
 		    .then(function success(res) {
 		        // console.log(res.data);
-		        console.log('success');
 		        that.data = res.data.definitions;
 		        that.repeatData = res.data.definitions.map(function(value, index) {
 		        	return {
@@ -28,6 +43,7 @@
 		        		value: index +1
 		        	}
 		        });
+
 		        that.term = that.query;
 		        document.getElementsByClassName('word-input')[0].value = "";
 		        // console.log(that.data)
@@ -35,12 +51,13 @@
 	    			return value.text
 	    		})
 	    		console.log(that.defArray.length)
+	    		that.query = "";
 		    }, function error(res) {
 		        console.log(res.status)
 		    });
 	    };
 
-	    this.save = function() {
+	    this.new = function() {
 	    	$http({
 	    		method: 'POST',
 	    		url: '/api/words',
@@ -52,11 +69,43 @@
 	    	.then(function success(res) {
 	    		console.log('saved!!!')
 	    	})
+	    };
 
-			console.log('SAVE HIT!!!')
-	    }
+	    this.index = function() {
+	    	$http({
+	    		method: 'GET',
+	    		url: '/api/words'
+	    	})
+	    	.then(function success(res) {
+	    		console.log(res)
+	    		that.indexDisplay = res.data
+
+	    	})
+	    };
+
+	    this.remove = function(id) {
+	    	$http({
+	    		method: "DELETE",
+	    		url: '/api/words/' + id
+	    	})
+	    	.then(function success(res) {
+	    		console.log(res)
+	    	});
+	    };
+
+	    this.show = function(id) {
+	    	$http({
+	    		method: "GET",
+	    		url: '/api/words/' + id
+	    	})
+	    	.then(function success(res) {
+	    		console.log(res.data)
+	    		that.showCurrent.word = res.data.word;
+	    	}, function error(res) {
+	    		console.log(res)
+	    	});
+	    };
+
 	})
-
-		
 
 })();
