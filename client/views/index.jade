@@ -20,10 +20,15 @@ block content
 						p {{w.value + "."}} {{w.data.text}}
 					div.btn(ng-show="word.term")
 						button.save(ng-click="word.new()") save
+						div#saved-alert(ng-show="word.savedAlert == 2")
+							p saved!
 			div.index-container(ng-show="word.navState == 1")
 				h3 Saved words
 				div.index(ng-repeat="item in word.indexDisplay")
 					span.word(ng-click="word.showWord(); word.show(item._id)") {{item.word}}
 					span.delete(ng-click="word.remove(item._id); word.index()") X
 			div.show-container(ng-show="word.navState == 3;")
-				h3 Word
+				h3 {{word.showCurrent.word}}
+				div#container(ng-repeat="defs in word.showCurrent.definition" contentEditable="true")
+					ul
+						li {{defs}}

@@ -11,6 +11,7 @@
 		this.repeatData;
 		this.navState;
 		this.indexDisplay;
+		this.savedAlert = 1;
 		this.showCurrent = {};
 
 		this.showIndex = function() {
@@ -68,6 +69,11 @@
 	    	})
 	    	.then(function success(res) {
 	    		console.log('saved!!!')
+	    		that.savedAlert = 2;
+	    		setTimeout(function() {
+	    			that.savedAlert = 1;
+	    			console.log('timeout')
+	    		}, 1000)
 	    	})
 	    };
 
@@ -79,7 +85,6 @@
 	    	.then(function success(res) {
 	    		console.log(res)
 	    		that.indexDisplay = res.data
-
 	    	})
 	    };
 
@@ -101,6 +106,7 @@
 	    	.then(function success(res) {
 	    		console.log(res.data)
 	    		that.showCurrent.word = res.data.word;
+	    		that.showCurrent.definition = res.data.definition;
 	    	}, function error(res) {
 	    		console.log(res)
 	    	});

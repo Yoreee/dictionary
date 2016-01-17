@@ -38,6 +38,15 @@ body {
 .delete{
 	color: red;
 	margin-left: 10px;
+	cursor: pointer;
+}
+
+.word {
+	cursor: pointer;
+}
+
+.outer {
+	margin-bottom: 100px;
 }
 /*body {
 	width: 100%;
