@@ -16,7 +16,8 @@ body {
 	position: absolute;
 	clear: both;
 	margin-left: auto;
-	right: 10px;
+	right: 50px;
+	top: 30px;
 }
 
 .github {

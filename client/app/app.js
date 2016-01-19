@@ -37,6 +37,7 @@
 		    })
 		    .then(function success(res) {
 		        // console.log(res.data);
+		        document.getElementById('container').innerHtml = "";
 		        that.data = res.data.definitions;
 		        that.repeatData = res.data.definitions.map(function(value, index) {
 		        	return {
