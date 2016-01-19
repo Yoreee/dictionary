@@ -45,38 +45,27 @@ body {
 
 .word {
 	cursor: pointer;
+	font-size: 20px;
 }
 
 .outer {
 	margin-bottom: 100px;
 }
 
-.title {
+.info {
+	font-size: 14px;
 	width: 60%;
 	max-width: 250px;
-	margin: 0 auto;
-}
-
-.title > h1 {
-	/*color: rgb(0, 200, 100);*/
-}
-
-.title > p {
-	color: rgb(0, 250, 150);
-}
-
-.index-container > p {
-	width: 60%;
-	max-width: 250px;
-	margin: 0 auto;
+	margin: 0 auto 30px auto;
 	color: rgb(0, 250, 150);
 }
 
 .word-input {
 	text-align: center;
-	
+
 }
 
 #star {
-	font-size: 20px;
+	font-size: 25px;
+	cursor: pointer;
 }
