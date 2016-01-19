@@ -70,10 +70,7 @@
 	    	.then(function success(res) {
 	    		console.log('saved!!!')
 	    		that.savedAlert = 2;
-	    		setTimeout(function() {
-	    			that.savedAlert = 1;
-	    			console.log('timeout')
-	    		}, 1000)
+	    		document.getElementById('star').style.color = "red";
 	    	})
 	    };
 

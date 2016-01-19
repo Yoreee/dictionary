@@ -4,8 +4,9 @@ block content
 	div.outer
 		div.git
 			a.github(href="https://github.com/Yoreee/dictionary")
-		h1 word up!
-		
+		div.title
+			h1 <i class="fa fa-book"></i> word up!
+			p <i class="fa fa-info-circle"></i> View your saved words or look up a new word.
 		div.nav()
 			button.saved-words(ng-click="word.showIndex(); word.index();") saved words
 			button.lookup-words(ng-click="word.showLookup()") look up words
@@ -13,22 +14,22 @@ block content
 			div.lookup-container(ng-show="word.navState == 2")
 				h4 Look up a word
 				input.word-input(ng-model="word.query" placeholder="type a word...")
-				button.word-submit(ng-click="word.lookup()") search
+				button.word-submit(ng-click="word.lookup()") search <i class="word-submit fa fa-search" ng-click="word.lookup()"></i>
 				div#container()
 					h3 {{word.term}}
 					div#definition(ng-repeat="w in word.repeatData")
 						p {{w.value + "."}} {{w.data.text}}
 					div.btn(ng-show="word.term")
-						button.save(ng-click="word.new()") save
+						<i class="fa fa-star-o" id="star" ng-click="word.new()"></i>
 						div#saved-alert(ng-show="word.savedAlert == 2")
 							p saved!
 			div.index-container(ng-show="word.navState == 1")
 				h3 Saved words
+				p <i class="fa fa-info-circle"></i> Click on a word to view its definitions.
 				div.index(ng-repeat="item in word.indexDisplay")
 					span.word(ng-click="word.showWord(); word.show(item._id)") {{item.word}}
-					span.delete(ng-click="word.remove(item._id); word.index()") X
+					span.delete(ng-click="word.remove(item._id); word.index()") <i class="fa fa-trash-o"></i>
 			div.show-container(ng-show="word.navState == 3;")
 				h3 {{word.showCurrent.word}}
 				div#container(ng-repeat="defs in word.showCurrent.definition" contentEditable="true")
-					ul
-						li {{defs}}
+					p <i class="fa fa-dot-circle-o"></i> {{defs}}

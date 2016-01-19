@@ -2,6 +2,7 @@ body {
 	font-family: 'Indie Flower', cursive;
 	letter-spacing: .2em;
 	text-align: center;
+	background-color: rgb(240, 260, 220);
 }
 
 #container {
@@ -37,7 +38,8 @@ body {
 
 .delete{
 	color: red;
-	margin-left: 10px;
+	margin-left: 1%;
+	margin-top: 15px;
 	cursor: pointer;
 }
 
@@ -48,53 +50,33 @@ body {
 .outer {
 	margin-bottom: 100px;
 }
-/*body {
-	width: 100%;
+
+.title {
+	width: 60%;
+	max-width: 250px;
 	margin: 0 auto;
-	padding: 0 auto;
 }
 
-.outer {
-	text-align: center;
+.title > h1 {
+	/*color: rgb(0, 200, 100);*/
+}
+
+.title > p {
+	color: rgb(0, 250, 150);
+}
+
+.index-container > p {
+	width: 60%;
+	max-width: 250px;
+	margin: 0 auto;
+	color: rgb(0, 250, 150);
 }
 
 .word-input {
-	margin-right: 10px;
-	height: 48px;
-	padding-left: 10px;
-	font-size: 20px;
-	border-radius: 5px;
-	outline: none;
-}
-
-.lookup-container {
-	margin-top: 20px;
-	display: inline-block;
-}
-
-.word-submit {
-	display: inline-block;
-	position: absolute;
-	border-radius: 5px;
-	height: 52px;
-}
-
-
-
-#container {
-	width: 60%;
-	max-width: 250px;
-	margin: 50px auto 0 auto;
 	text-align: center;
+	
 }
 
-#container > div {
-	position: relative;
-	text-align: left;
+#star {
+	font-size: 20px;
 }
-
-#definition {
-	position: relative;
-}
-
-*/
