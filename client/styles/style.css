@@ -32,7 +32,7 @@ body {
 		
 
 .github {
-	position: relative;
+	position: absolute;
 	background: url("../assets/github-logo.png");
 	width: 36px;
 	background-repeat: no-repeat;
@@ -63,12 +63,14 @@ body {
 
 .outer {
 	margin: 100px 0 100px 0;
+	position: relative;
 }
 
 /*saved word*/
 .index-container > h3 {
 	color: rgb(159, 93, 65);
 	font-weight: 900;
+	font-size: 1.7em;
 }
 /*info font*/
 .info {
@@ -116,5 +118,10 @@ body {
 }
 
 .lookup-container > h4 {
+	color: rgb(159, 93, 65);
+	font-size: 1.7em;
+}
+
+.show-container > h3 {
 	color: rgb(159, 93, 65);
 }
