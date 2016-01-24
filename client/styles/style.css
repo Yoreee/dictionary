@@ -1,8 +1,15 @@
+/*background*/
 body {
 	font-family: 'Indie Flower', cursive;
 	letter-spacing: .2em;
 	text-align: center;
-	background-color: rgb(240, 260, 220);
+	background-color: rgb(251, 177, 97);
+}
+/*title font*/
+
+.title > h1 {
+	color: rgb(120, 165, 172);
+	font-size: 3.7em;
 }
 
 #container {
@@ -10,23 +17,27 @@ body {
 	max-width: 300px;
 	text-align: center;
 	margin: 0 auto;
+	color: rgb(159, 93, 65);
 }
 
 .git {
 	position: absolute;
-	clear: both;
-	margin-left: auto;
-	right: 50px;
-	top: 30px;
+	top: 0;
+
 }
 
-.github {
-	background: url("../assets/github-logo.png");
+.title {
 	position: relative;
+}
+		
+
+.github {
+	position: relative;
+	background: url("../assets/github-logo.png");
 	width: 36px;
 	background-repeat: no-repeat;
 	height: 36px;
-	float: right;
+	background-size: 15px;
 }
 
 .index > span {
@@ -44,29 +55,66 @@ body {
 	cursor: pointer;
 }
 
+
 .word {
 	cursor: pointer;
 	font-size: 20px;
 }
 
 .outer {
-	margin-bottom: 100px;
+	margin: 100px 0 100px 0;
 }
 
+/*saved word*/
+.index-container > h3 {
+	color: rgb(159, 93, 65);
+	font-weight: 900;
+}
+/*info font*/
 .info {
 	font-size: 14px;
 	width: 60%;
 	max-width: 250px;
 	margin: 0 auto 30px auto;
-	color: rgb(0, 250, 150);
+	color: rgb(239, 65, 86);
 }
 
 .word-input {
 	text-align: center;
-
+	height: 27px;
 }
 
+.word-submit {
+	background-color: rgb(120, 165, 172);
+	color: rgb(251, 177, 97);
+}
 #star {
-	font-size: 25px;
+	font-size: 40px;
 	cursor: pointer;
+	color: rgb(120, 165, 172);
+}
+
+
+/*word and definitions font colors*/
+.word {
+	color: rgb(159, 93, 65);
+}
+
+.definitions {
+	color: rgb (159, 93, 65);
+}
+
+/*buttons bg+font*/
+.saved-words {
+	background-color: rgb(120, 165, 172);
+	color: rgb(251, 177, 97);
+}
+
+.lookup-words {
+	background-color: rgb(120, 165, 172);
+	color: rgb(251, 177, 97);
+}
+
+.lookup-container > h4 {
+	color: rgb(159, 93, 65);
 }

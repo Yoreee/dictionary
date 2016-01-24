@@ -2,11 +2,11 @@ extends layout
 
 block content
 	div.outer
-		div.git
-			a.github(href="https://github.com/Yoreee/dictionary")
+		
 		div.title
 			h1 <i class="fa fa-book"></i> word up!
 			p.info <i class="fa fa-info-circle"></i> View your saved words or look up a new word.
+			a.github(href="https://github.com/Yoreee/dictionary")
 		div.nav()
 			button.saved-words(ng-click="word.showIndex(); word.index();") saved words
 			button.lookup-words(ng-click="word.showLookup()") look up words
@@ -33,4 +33,4 @@ block content
 			div.show-container(ng-show="word.navState == 3;")
 				h3 {{word.showCurrent.word}}
 				div#container(ng-repeat="defs in word.showCurrent.definition" contentEditable="true")
-					p <i class="fa fa-dot-circle-o"></i> {{defs}}
+					p.definitions <i class="fa fa-dot-circle-o"></i> {{defs}}
