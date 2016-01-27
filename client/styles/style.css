@@ -3,12 +3,12 @@ body {
 	font-family: 'Indie Flower', cursive;
 	letter-spacing: .2em;
 	text-align: center;
-	background-color: rgb(251, 177, 97);
+	background-color: rgb(90, 68, 130);
 }
 /*title font*/
 
 .title > h1 {
-	color: rgb(120, 165, 172);
+	color: rgb(254, 194, 51);
 	font-size: 3.7em;
 }
 
@@ -58,7 +58,7 @@ body {
 
 .word {
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 25px;
 }
 
 .outer {
@@ -68,10 +68,11 @@ body {
 
 /*saved word*/
 .index-container > h3 {
-	color: rgb(159, 93, 65);
+	color: rgb(254, 194, 51);
 	font-weight: 900;
 	font-size: 1.7em;
 }
+
 /*info font*/
 .info {
 	font-size: 14px;
@@ -83,12 +84,14 @@ body {
 
 .word-input {
 	text-align: center;
-	height: 27px;
 }
 
 .word-submit {
-	background-color: rgb(120, 165, 172);
-	color: rgb(251, 177, 97);
+	background-color: rgb(254, 194, 51);
+	color: rgb(40, 18, 80);
+	border: none;
+	margin-left: 10px;
+	font-weight: bold;
 }
 #star {
 	font-size: 40px;
@@ -99,29 +102,42 @@ body {
 
 /*word and definitions font colors*/
 .word {
-	color: rgb(159, 93, 65);
+	color: rgb(229, 203, 205);
 }
 
 .definitions {
-	color: rgb (159, 93, 65);
+	color: rgb(229, 203, 205);
 }
 
 /*buttons bg+font*/
 .saved-words {
-	background-color: rgb(120, 165, 172);
-	color: rgb(251, 177, 97);
+	background-color: rgb(254, 194, 51);
+	color: rgb(40, 18, 80);
+	border: none;
+	margin-right: 10px;
+	font-weight: bold;
 }
 
 .lookup-words {
-	background-color: rgb(120, 165, 172);
-	color: rgb(251, 177, 97);
+	background-color: rgb(254, 194, 51);
+	color: rgb(40, 18, 80);
+	 border: none;
+	 font-weight: bold;
 }
 
 .lookup-container > h4 {
-	color: rgb(159, 93, 65);
+	color: rgb(254, 194, 51);
 	font-size: 1.7em;
 }
 
 .show-container > h3 {
-	color: rgb(159, 93, 65);
+	color: rgb(229, 203, 205);
+	font-weight: bold;
+}
+
+#container > h3 {
+	color: rgb(229, 203, 205);
+}
+#definition > p {
+	color: rgb(229, 203, 205);
 }
