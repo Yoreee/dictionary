@@ -14,24 +14,26 @@
 		this.savedAlert = 1;
 		this.showCurrent = {};
 
+		//This is changes the navstate to show the index of words.
 		this.showIndex = function() {
 			that.navState = 1;
 		};
-
+		//This changes the navstate to show the search box to look up words.
 		this.showLookup = function() {
 			that.navState = 2;
 		};
-
+		//This changes the navstate to show the definition of your saved word.
 		this.showWord = function() {
 			that.navState = 3;
 		};
 
+		//This makes an HTTP request to the Words API and get back the definitions. 
 		this.lookup = function() {
 	        $http({
 		        url: 'https://montanaflynn-dictionary.p.mashape.com/define?word=' + this.query, //URL to hit
-		        qs: {from: 'blog example', time: +new Date()}, //Query string data
-		        method: 'GET', //Specify the method
-		        headers: { //We can define headers too
+		        qs: {from: 'blog example', time: +new Date()},
+		        method: 'GET',
+		        headers: {
 		            'X-Mashape-Key': "uxtlI0eyGLmsh2EDGWuYiRSaBHwQp19aJnCjsnpLkbTx0SdeWu"
 	        	}
 		    })
@@ -59,6 +61,7 @@
 		    });
 	    };
 
+	    // This saves a new word to our database.
 	    this.new = function() {
 	    	$http({
 	    		method: 'POST',
@@ -75,6 +78,7 @@
 	    	})
 	    };
 
+	    // This retrieves all of our saved words from our database.
 	    this.index = function() {
 	    	$http({
 	    		method: 'GET',
@@ -85,7 +89,7 @@
 	    		that.indexDisplay = res.data
 	    	})
 	    };
-
+	    // This deletes words from our database.
 	    this.remove = function(id) {
 	    	$http({
 	    		method: "DELETE",
@@ -96,6 +100,7 @@
 	    	});
 	    };
 
+	    // This retrieves a words definitions from our database.
 	    this.show = function(id) {
 	    	$http({
 	    		method: "GET",
